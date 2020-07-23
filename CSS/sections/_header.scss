@@ -1,0 +1,87 @@
+.headerRightNav {
+    padding-right: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    p {
+      margin: 5px;
+      font-size: 26px;
+      a {
+        text-decoration: none;
+        color: black;
+        &:hover {
+          color: #073B4C;
+        }
+      }
+    }
+  }
+  .headerTitle {
+    padding-left: 200px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    h1 {
+      margin: 0;
+      font-size: 40px;
+      a {
+        text-decoration: none;
+        color: black;
+        &:hover {
+          color: #073B4C;
+        }
+      }
+    }
+    p {
+      margin: 0;
+      position: relative;
+      font-size: 14px;
+      top: -7px;
+      left: 53px;
+    }
+  }
+  .header {
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 120px;
+    background-color: white;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .headerLoginSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: center;
+    p {
+      font-size: 20px;
+    }
+    button {
+      margin-left: 20px;
+      font-size: 26px;
+      border-radius: 44px;
+      background-color: white;
+      font-family: 'Nunito', sans-serif;
+      border: none;
+      box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+      width: auto;
+      padding-left: 30px;
+      padding-right: 30px;
+      height: 44px;
+      &:hover {
+        cursor: pointer;
+        background-color: lightgray;
+        box-shadow: none;
+      }
+    }
+  }
+
+  

@@ -1,0 +1,44 @@
+.box {
+    height: 109px;
+    width: 750px;
+    background-color: white;
+    margin: auto;
+    border-radius: 5px;
+    border: 1.5px solid #073B4C;
+    overflow: hidden;
+  
+    span {
+      font-size: 30px;
+      float: left;
+      margin: 6px 3px 6px 3px;
+      padding: 1px 5px 1px 5px;
+      text-align: justify;
+      position: relative;
+    }
+  }
+.result {
+    text-align: center;
+    display: none;
+}
+
+.wpm {
+    font-size: 30px;
+  }
+.FalseRight {
+    p {
+      display: inline;
+      font-size: 20px;
+    }
+}
+
+.ttt {
+    height: 109px;
+    width: 750px;
+  }
+
+.saveButton {
+  @extend input;
+  &:hover {
+    background-color: lightgray;
+  }
+}

@@ -1,0 +1,61 @@
+.std {
+    margin: 20px auto 5px auto;
+    text-align: center;
+    width: 720px;
+    height: 30px;
+    p {
+      display: inline;
+      font-size: 20px;
+    }
+  }
+
+  .userInterface {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    .reloadButton {
+      display: inline;
+      font-size: 20px;
+    }
+    p {
+      display: inline;
+      font-size: 24px;
+    }
+  }
+
+  .timer {
+    border: 1.5px solid black;
+    background-color: white;
+    border-radius: 5px;
+    padding: 0px 5px 0px 5px;
+  }
+
+  .reloadButton {
+    font-family: 'Nunito', sans-serif;
+    display: block;
+    margin: auto;
+    background-color: white;
+    border: 1.5px solid #073B4C;
+    border-radius: 5px;
+  
+    i {
+      color: black;
+      font-size: 22px;
+      padding: 5px;
+      cursor: pointer;
+    }
+  }
+  .reloadButton:hover {
+    background-color: lightgrey;
+  }
+  .reloadButton:active {
+    background-color: gray;
+  }
+
+  .reloadButton:focus {
+    background-color: gray;
+  }
+
+  .divider {
+    height: 70px;
+  }

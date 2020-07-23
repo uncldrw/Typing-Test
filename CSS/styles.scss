@@ -1,0 +1,106 @@
+@import "./sections/saveResult";
+@import "./sections/header";
+@import "./sections/login";
+@import "./sections/footer";
+@import "./sections/highscoreboard";
+@import "./sections/wordbox";
+@import "./sections/signup";
+@import "./sections/userinterface";
+
+html {
+  background-color: #FFD166;
+  font-family: 'Nunito', sans-serif;
+}
+
+body {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  margin: 0;
+}
+
+input {
+  font-family: 'Nunito', sans-serif;
+}
+
+ul {
+  text-align: center;
+  padding: 0;
+  p {
+    display: inline-block;
+    margin: 0;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  display: inline;
+  font-size: 24px;
+  border: 1.5px solid black;
+  border-radius: 5px;
+  padding: 0px 10px 0px 10px;
+  &:hover {
+    color: black;
+  }
+}
+
+input:focus {
+  outline: 0px;
+  border: 1.5px solid black;
+}
+
+.right {
+  color: #06D6A0;
+}
+.false {
+  color: #ef476f;
+}
+
+.highlight {
+  background-color: rgba(17, 138,178, 0.5);
+  border-radius: 5px;
+}
+
+.unhighlight {
+  background-color: unset;
+}
+
+.submitButton {
+  display: block;
+  margin: 50px auto 50px auto;
+}
+.submitButton:hover {
+  background-color: lightgrey;
+}
+
+.submitButton:active {
+  background-color: gray;
+  color: white;
+}
+
+.dimming {
+  background-color: rgba(0,0,0,0.5);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 2;
+  display: none;
+  &.dimm {
+    opacity: 1;
+    display: block;
+    animation: fade 0.5s ease forwards;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
