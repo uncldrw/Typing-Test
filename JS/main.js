@@ -134,7 +134,7 @@ function setResultColor(result) {
 
 function startTimer() {
   document.getElementById('input').removeAttribute('onkeypress');
-  const startingMin = 0.2;
+  const startingMin = 1;
   let time = startingMin * 60;
   refresh = setInterval(updateCountdown, 1000);
   keystrokeCounter();
@@ -235,3 +235,20 @@ function prepareForm() {
   document.querySelector('#c_words').value = correctWords;
   document.querySelector('#f_words').value = falseWords;
 }
+
+function wordGen(keyword) {
+
+  fetch('https://www.openthesaurus.de/synonyme/search?q=' + keyword + '&format=application/json')
+    .then(response => response.json())
+    .then(data => {
+      let synset = data.synsets;
+      synset.forEach(function (array1) {
+        let terms = array1.terms;
+        terms.forEach(function (array2) {
+          console.log(array2.term);
+        });
+      });
+    });
+}
+
+wordGen("computer");
