@@ -35,7 +35,7 @@ function resetTest() {
   displayTime.innerHTML = '1:00';
 }
 
-function wordGenerator() {
+/*function wordGenerator() {
   for (var i = 0; i <= 300; i++) {
     var wordBank = [
       'warum',
@@ -77,7 +77,7 @@ function wordGenerator() {
     highlightWord();
   }
 }
-
+*/
 function highlightWord() {
   var currentWord = document.getElementById(currentID);
   currentWord.setAttribute('class', 'highlight');
@@ -246,9 +246,13 @@ function wordGen(keyword) {
         let terms = array1.terms;
         terms.forEach(function (array2) {
           console.log(array2.term);
+          var span = document.createElement('span');
+          var node = document.createTextNode(array2.term);
+          span.appendChild(node);
+          textToType.appendChild(span);
         });
       });
     });
 }
 
-wordGen("computer");
+wordGen("haus");
