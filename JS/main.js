@@ -1,5 +1,6 @@
 'use strict';
 
+let hi = "hi";
 let keystrokes = 0;
 let currentID = 0;
 let refresh = setInterval(0);
