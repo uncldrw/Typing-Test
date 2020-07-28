@@ -1,7 +1,5 @@
 'use strict';
 
-let pascal = "pascalTait"
-
 let keystrokes = 0;
 let currentID = 0;
 let refresh = setInterval(0);
@@ -238,8 +236,23 @@ function prepareForm() {
   document.querySelector('#f_words').value = falseWords;
 }
 
-function wordGen(keyword) {
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function wordGen(keyword) {
   fetch('https://www.openthesaurus.de/synonyme/search?q=' + keyword + '&format=application/json')
     .then(response => response.json())
     .then(data => {
