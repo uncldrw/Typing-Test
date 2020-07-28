@@ -1,7 +1,5 @@
 'use strict';
-
 let hi = "hi";
-
 let keystrokes = 0;
 let currentID = 0;
 let refresh = setInterval(0);
@@ -23,10 +21,7 @@ function test() {
     console.error("Punkt")
   }
 }
-
 test();
-
-
 async function fetchApi(keyword) {
   let url = `https://www.openthesaurus.de/synonyme/search?q=${keyword}&format=application/json`;
   let data = await (await fetch(url)).json();
@@ -35,8 +30,7 @@ async function fetchApi(keyword) {
     let terms = array1.terms;
     terms.forEach(function (array2) {
       let term = array2.term
-      if (term.includes('.') || term.includes(" ") || term.length > 10) {
-      } else {
+      if (term.includes('.') || term.includes(" ") || term.length > 10) { } else {
         wordBank.push(term);
       }
     });
@@ -55,14 +49,13 @@ function wordGenerator() {
     highlightWord();
   }
 }
-
 async function start() {
-  await fetchApi("Haus")
-  await fetchApi("der")
   await fetchApi("Computer")
+  await fetchApi("Kind")
+  await fetchApi("wer")
   wordGenerator();
+  console.log(wordBank)
 }
-
 
 function resetTest() {
   var removeID = 0;
@@ -84,7 +77,6 @@ function resetTest() {
   input.setAttribute('onkeypress', 'startTimer()');
   displayTime.innerHTML = '1:00';
 }
-
 /*function wordGenerator() {
   for (var i = 0; i <= 300; i++) {
     var wordBank = [
@@ -196,7 +188,7 @@ function startTimer() {
     seconds = seconds < 10 ? '0' + seconds : seconds;
     displayTime.innerHTML = `${min}:${seconds}`;
     time--;
-    if (time + 1 == 0) {
+    if (time + 1 === 0) {
       document.getElementById('input').value = '';
       clearInterval(refresh);
       showResult();
@@ -208,8 +200,7 @@ function showResult() {
   getStats();
   result.style.display = 'block';
   document.getElementById('box').style.height = '240px';
-  document.getElementById('resultStroke').innerHTML =
-    'Tastenanschläge: ' + keystrokes;
+  document.getElementById('resultStroke').innerHTML = 'Tastenanschläge: ' + keystrokes;
 }
 
 function getStats() {
@@ -270,12 +261,8 @@ function hideForm() {
   document.getElementById('formBox').classList.add('slideOut');
   document.getElementById('form').classList.add('fadeOut');
 }
-
-
-
 document.querySelector('.saveButton').addEventListener('click', () => document.querySelector(".saveResultBox , .saveButton").classList.toggle('openResultBox'));
 document.querySelector('.saveButton').addEventListener('click', () => document.querySelector(".dimming , .saveButton").classList.toggle('dimm'));
-
 document.querySelector('.closeButton').addEventListener('click', () => document.querySelector(".saveResultBox , .closeButton").classList.toggle('openResultBox'));
 document.querySelector('.closeButton').addEventListener('click', () => document.querySelector(".dimming , .dimm").classList.toggle('dimm'));
 
@@ -285,7 +272,6 @@ function prepareForm() {
   document.querySelector('#c_words').value = correctWords;
   document.querySelector('#f_words').value = falseWords;
 }
-
 // function wordGen(keyword) {
 //   fetch('https://www.openthesaurus.de/synonyme/search?q=' + keyword + '&format=application/json')
 //     .then(response => response.json())
@@ -293,7 +279,6 @@ function prepareForm() {
 //       let synset = data.synsets;
 //       synset.forEach(function (array1) {
 //         let terms = array1.terms;
-
 //         terms.forEach(function (array2) {
 //           console.log(array2.term);
 //           var span = document.createElement('span');
@@ -304,9 +289,7 @@ function prepareForm() {
 //       });
 //     });
 // }
-
 // wordGen("hi")
-
 // function wordGen(keyword) {
 //   fetch('https://www.openthesaurus.de/synonyme/search?q=' + keyword + '&format=application/json')
 //     .then(response => response.json())
@@ -314,7 +297,3 @@ function prepareForm() {
 //       console.log(data)
 //     })
 // }
-
-
-
-

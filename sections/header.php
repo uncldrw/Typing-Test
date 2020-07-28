@@ -1,10 +1,10 @@
 <?php
-   session_start();
-   require 'includes/dbh_incl.php';
-   $sql = "SELECT * FROM users;";
-   $result = mysqli_query($con, $sql);
-   $resultCheck = mysqli_num_rows($result);
-   ?>
+session_start();
+require 'includes/dbh_incl.php';
+$sql = "SELECT * FROM users;";
+$result = mysqli_query($con, $sql);
+$resultCheck = mysqli_num_rows($result);
+?>
 <!DOCTYPE html>
 <html>
    <head>
@@ -25,8 +25,8 @@
          </div>
          <div class="headerRightNav">
             <?php
-               if (isset($_SESSION['userId'])) {
-                   $currentUsername = $_SESSION["userUid"]; ?>
+if (isset($_SESSION['userId'])) {
+    $currentUsername = $_SESSION["userUid"]; ?>
             <div class="headerLoginSection">
                <button id="username"><?php echo $currentUsername; ?></button>
                <form action="includes/logout_incl.php" method="post">
@@ -34,13 +34,13 @@
                </form>
             </div>
             <?php
-               } else {
-                   ?>
+} else {
+        ?>
             <p><a href="login.php">Anmelden</a></p>
             <p>|</p>
             <p><a href="signup.php">Registrieren</a></p>
             <?php
-               }
-               ?>
+    }
+?>
          </div>
       </div>

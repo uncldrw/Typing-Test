@@ -1,4 +1,4 @@
-    <?php require(__DIR__ . "/sections/header.php"); ?>
+<?php require(__DIR__ . "/sections/header.php"); ?>
     <?php require(__DIR__ . "/sections/saveResult.php"); ?> 
     <?php require(__DIR__ . "/sections/wordBox.php"); ?>
     <?php require(__DIR__ . "/sections/userInterface.php"); ?>

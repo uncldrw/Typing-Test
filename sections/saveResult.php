@@ -2,8 +2,8 @@
     <div class="saveResultBox">
         <h1>Speichere dein Ergebnis</h1>
         <?php
-        if (isset($_SESSION['userId'])) {
-            ?>
+if (isset($_SESSION['userId'])) {
+    ?>
         <form action="includes/saveResult_incl.php" method="post">
             <input id="user" type="hidden" name="user">
             <input id="wpm" type="hidden" name="wpm">
@@ -15,14 +15,14 @@
             schließen
         </button>
         <?php
-        } else {
-            ?>
+} else {
+        ?>
         <p>Melde dich an um diese Funktion nutzen zu können</p>
         <button class="closeButton">
             schließen
         </button>
         <?php
-        }
-        ?>
+    }
+?>
     </div>
 </div>

@@ -16,15 +16,14 @@ if (isset($_SESSION['userId'])) {
       <td><strong>Falsch</strong></td>
     </tr>
     <?php
-    while ($row = mysqli_fetch_assoc($result)) {
-        echo
-          "<tr>
-            <td>". $row["uName"] . "</td>
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo "<tr>
+            <td>" . $row["uName"] . "</td>
             <td>" . $row["wpm"] . "</td>
             <td>" . $row["c_words"] . "</td>
             <td>" . $row["f_words"] . "</td>
           </tr>";
-    }
+        }
     }
 } else { ?>
 
