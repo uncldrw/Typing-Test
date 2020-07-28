@@ -14,14 +14,8 @@ let correctWords = 0;
 let falseWords = 0;
 let typedWords = 0;
 let wordBank = [];
+let startWords = ["der", "knapp", "Arbeit", "Name", "Weg", "zahl", "wer", "dazu", "lang", "land", "machen", "einfach"]
 
-function test() {
-  let tester = "hi"
-  if (tester.includes('.')) {
-    console.error("Punkt")
-  }
-}
-test();
 async function fetchApi(keyword) {
   let url = `https://www.openthesaurus.de/synonyme/search?q=${keyword}&format=application/json`;
   let data = await (await fetch(url)).json();
@@ -49,12 +43,11 @@ function wordGenerator() {
     highlightWord();
   }
 }
-async function start() {
-  await fetchApi("Computer")
-  await fetchApi("Kind")
-  await fetchApi("wer")
+async function start(a, b, c) {
+  await fetchApi(a)
+  await fetchApi(b)
+  await fetchApi(c)
   wordGenerator();
-  console.log(wordBank)
 }
 
 function resetTest() {
@@ -77,49 +70,7 @@ function resetTest() {
   input.setAttribute('onkeypress', 'startTimer()');
   displayTime.innerHTML = '1:00';
 }
-/*function wordGenerator() {
-  for (var i = 0; i <= 300; i++) {
-    var wordBank = [
-      'warum',
-      'Rest',
-      'nein',
-      'König',
-      'wenn ',
-      'spielen',
-      'Arbeit',
-      'Loch',
-      'wegen',
-      'warten',
-      'ersten',
-      'weil',
-      'nach',
-      'was',
-      'sagen',
-      'sie',
-      'Haus',
-      'Taste',
-      'Benutzer',
-      'Flasche',
-      'nicht',
-      'Mann',
-      'wieso',
-      'ändern',
-      'überlegen',
-      'Kopf',
-      'schreiben',
-      'Buch',
-    ];
-    var spanID = i;
-    var word = wordBank[Math.floor(Math.random() * wordBank.length)];
-    var span = document.createElement('span');
-    var node = document.createTextNode(word);
-    span.setAttribute('id', spanID);
-    span.appendChild(node);
-    textToType.appendChild(span);
-    highlightWord();
-  }
-}
-*/
+
 function highlightWord() {
   var currentWord = document.getElementById(currentID);
   currentWord.setAttribute('class', 'highlight');
@@ -272,28 +223,10 @@ function prepareForm() {
   document.querySelector('#c_words').value = correctWords;
   document.querySelector('#f_words').value = falseWords;
 }
-// function wordGen(keyword) {
-//   fetch('https://www.openthesaurus.de/synonyme/search?q=' + keyword + '&format=application/json')
-//     .then(response => response.json())
-//     .then(data => {
-//       let synset = data.synsets;
-//       synset.forEach(function (array1) {
-//         let terms = array1.terms;
-//         terms.forEach(function (array2) {
-//           console.log(array2.term);
-//           var span = document.createElement('span');
-//           var node = document.createTextNode(array2.term);
-//           span.appendChild(node);
-//           textToType.appendChild(span);
-//         });
-//       });
-//     });
-// }
-// wordGen("hi")
-// function wordGen(keyword) {
-//   fetch('https://www.openthesaurus.de/synonyme/search?q=' + keyword + '&format=application/json')
-//     .then(response => response.json())
-//     .then(data => {
-//       console.log(data)
-//     })
-// }
+
+function fetchWords() {
+  let keyword1 = startWords[Math.floor(Math.random() * startWords.length)];
+  let keyword2 = startWords[Math.floor(Math.random() * startWords.length)];
+  let keyword3 = startWords[Math.floor(Math.random() * startWords.length)];
+  start(keyword1, keyword2, keyword3)
+}
