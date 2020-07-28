@@ -236,8 +236,7 @@ function prepareForm() {
   document.querySelector('#f_words').value = falseWords;
 }
 
-
-
+let hi = "hi";
 
 
 
@@ -259,6 +258,7 @@ function wordGen(keyword) {
       let synset = data.synsets;
       synset.forEach(function (array1) {
         let terms = array1.terms;
+
         terms.forEach(function (array2) {
           console.log(array2.term);
           var span = document.createElement('span');
@@ -269,5 +269,3 @@ function wordGen(keyword) {
       });
     });
 }
-
-wordGen("haus");
