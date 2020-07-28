@@ -236,9 +236,6 @@ function prepareForm() {
   document.querySelector('#f_words').value = falseWords;
 }
 
-let hi = "hi";
-
-
 
 
 
