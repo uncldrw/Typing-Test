@@ -13,6 +13,54 @@ let error = 0;
 let correctWords = 0;
 let falseWords = 0;
 let typedWords = 0;
+let wordBank = [];
+
+function test() {
+  let tester = "hi"
+  if (tester.includes('.')) {
+    console.error("Punkt")
+  }
+}
+
+test();
+
+
+async function fetchApi(keyword) {
+  let url = `https://www.openthesaurus.de/synonyme/search?q=${keyword}&format=application/json`;
+  let data = await (await fetch(url)).json();
+  let synset = data.synsets;
+  synset.forEach(function (array1) {
+    let terms = array1.terms;
+    terms.forEach(function (array2) {
+      let term = array2.term
+      if (term.includes('.') || term.includes(" ") || term.length > 10) {
+      } else {
+        wordBank.push(term);
+      }
+    });
+  })
+}
+
+function wordGenerator() {
+  for (var i = 0; i <= 300; i++) {
+    var spanID = i;
+    var word = wordBank[Math.floor(Math.random() * wordBank.length)];
+    var span = document.createElement('span');
+    var node = document.createTextNode(word);
+    span.setAttribute('id', spanID);
+    span.appendChild(node);
+    textToType.appendChild(span);
+    highlightWord();
+  }
+}
+
+async function start() {
+  await fetchApi("Haus")
+  await fetchApi("der")
+  await fetchApi("Computer")
+  wordGenerator();
+}
+
 
 function resetTest() {
   var removeID = 0;
@@ -236,33 +284,35 @@ function prepareForm() {
   document.querySelector('#f_words').value = falseWords;
 }
 
+// function wordGen(keyword) {
+//   fetch('https://www.openthesaurus.de/synonyme/search?q=' + keyword + '&format=application/json')
+//     .then(response => response.json())
+//     .then(data => {
+//       let synset = data.synsets;
+//       synset.forEach(function (array1) {
+//         let terms = array1.terms;
+
+//         terms.forEach(function (array2) {
+//           console.log(array2.term);
+//           var span = document.createElement('span');
+//           var node = document.createTextNode(array2.term);
+//           span.appendChild(node);
+//           textToType.appendChild(span);
+//         });
+//       });
+//     });
+// }
+
+// wordGen("hi")
+
+// function wordGen(keyword) {
+//   fetch('https://www.openthesaurus.de/synonyme/search?q=' + keyword + '&format=application/json')
+//     .then(response => response.json())
+//     .then(data => {
+//       console.log(data)
+//     })
+// }
 
 
 
 
-
-
-
-
-
-
-
-
-function wordGen(keyword) {
-  fetch('https://www.openthesaurus.de/synonyme/search?q=' + keyword + '&format=application/json')
-    .then(response => response.json())
-    .then(data => {
-      let synset = data.synsets;
-      synset.forEach(function (array1) {
-        let terms = array1.terms;
-
-        terms.forEach(function (array2) {
-          console.log(array2.term);
-          var span = document.createElement('span');
-          var node = document.createTextNode(array2.term);
-          span.appendChild(node);
-          textToType.appendChild(span);
-        });
-      });
-    });
-}
