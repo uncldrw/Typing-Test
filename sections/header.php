@@ -23,6 +23,14 @@ $resultCheck = mysqli_num_rows($result);
                <p>Teste Deine Tippgeschwindigkeit!</p>
             </div>
          </div>
+         <div>
+            <ul class="navPoints">
+               <li><a href="#">Custom Game</a></li>
+               <li><a href="#">Mein Account</a></li>
+               <li><a href="#">Anleitung</a></li>
+               <li><a href="#">Support</a></li>
+            </ul>
+         </div>
          <div class="headerRightNav">
             <?php
 if (isset($_SESSION['userId'])) {
