@@ -15,6 +15,31 @@
         <input type="text">
     </div>
 </div>
+<h1>ANSI Modus</h1>
+<p class="desc">Keine Umlaute</p>
+<div class="withTime">
+        <div>
+            <p>Ja</p>
+            <input type="radio" name="withU">
+        </div>
+        <div>
+            <p>Nein</p>
+            <input type="radio" name="withU">
+        </div>
+    </div>
+</div>
+<h1>Groß- und Kleinschreibung beachten?</h1>
+<div class="withTime">
+        <div>
+            <p>Ja</p>
+            <input type="radio" name="withSize">
+        </div>
+        <div>
+            <p>Nein</p>
+            <input type="radio" name="withSize">
+        </div>
+    </div>
+</div>
 <div>
 <h1>Möchtest du auf Zeit spielen?</h1>
 <p class="desc">Übe mit oder Ohne Zeit (Bei Nein läuft der Test unbegrenzt)</p>
