@@ -5,6 +5,11 @@
     <div class="loginTitle">
         <h1>Anmelden</h1>
     </div>
+    <?php
+        if (isset($_GET['signup']) == 'success') {
+            echo '<p class="signupSucess">Account wurde Erstellt!</p>';
+        }
+    ?>
     <form  action="includes/login_incl.php" method="post" class="loginField">
       <div class="loginInput">
           <input name="mailuid" type="text" placeholder="E-Mail/Benutzername">

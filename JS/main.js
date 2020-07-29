@@ -14,7 +14,7 @@ let correctWords = 0;
 let falseWords = 0;
 let typedWords = 0;
 let wordBank = [];
-let startWords = ["der", "knapp", "Arbeit", "Name", "Weg", "zahl", "wer", "dazu", "lang", "land", "machen", "einfach"]
+let startWords = ["der", "knapp", "Arbeit", "Name", "Weg", "zahl", "wer", "dazu", "lang", "land", "machen", "einfach", "mein"]
 
 async function fetchApi(keyword) {
   let url = `https://www.openthesaurus.de/synonyme/search?q=${keyword}&format=application/json`;

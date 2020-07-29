@@ -18,8 +18,6 @@ if (isset($_GET['error'])) {
     } elseif ($_GET['error'] == "usertaken") {
         echo '<p class="signupAlert">Benutzername ist schon vergeben!</p>';
     }
-} elseif (isset($_GET['signup']) == 'success') {
-    echo '<p class="signupSucess">Account wurde Erstellt!</p>';
 }
 ?>
     </div>
