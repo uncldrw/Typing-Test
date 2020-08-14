@@ -13,7 +13,7 @@
 .saveResultBox {
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-  border: 1.5px solid black;
+  border: 1.5px solid var(--lightsecondary);
   width: 40vw;
   height: 400px;
   border-radius: 20px;
@@ -79,7 +79,7 @@
 
 .headerRightNav p a {
   text-decoration: none;
-  color: black;
+  color: var(--fonts);
 }
 
 .headerRightNav p a:hover {
@@ -111,7 +111,7 @@
 
 .headerTitle h1 a {
   text-decoration: none;
-  color: black;
+  color: var(--fonts);
 }
 
 .headerTitle h1 a:hover {
@@ -132,7 +132,7 @@
   z-index: 1;
   width: 100%;
   height: 120px;
-  background-color: white;
+  background-color: var(--secondary);
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
   display: -webkit-box;
@@ -190,6 +190,10 @@
           box-shadow: none;
 }
 
+input, .saveResultBox button, .saveButton {
+  background-color: var(--input);
+}
+
 .navPoints {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -204,7 +208,7 @@
 
 .navPoints li a {
   text-decoration: none;
-  color: black;
+  color: var(--fonts);
 }
 
 .navPoints li a:hover {
@@ -231,7 +235,7 @@
   padding: 100px;
   height: auto;
   width: auto;
-  background-color: white;
+  background-color: var(--secondary);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -246,14 +250,14 @@
       -ms-flex-direction: column;
           flex-direction: column;
   border-radius: 10px;
-  border: 1.5px solid black;
+  border: 1.5px solid var(--lightsecondary);
 }
 
 .loginBox button {
   cursor: pointer;
   margin-top: 10px;
-  background-color: white;
-  border: 1.5px solid black;
+  background-color: var(--secondary);
+  border: 1.5px solid var(--lightsecondary);
   font-family: 'Nunito', sans-serif;
   font-size: 26px;
   border-radius: 5px;
@@ -299,13 +303,13 @@
 }
 
 .highscore {
-  background-color: whitesmoke;
+  background-color: var(--secondary);
   width: 700px;
   height: 700px;
   display: block;
   margin: auto;
   border-radius: 5px;
-  border: 1.5px solid black;
+  border: 1.5px solid var(--lightsecondary);
 }
 
 .highscore .highscoreTitle {
@@ -341,7 +345,7 @@
 .box {
   height: 109px;
   width: 750px;
-  background-color: white;
+  background-color: var(--secondary);
   margin: auto;
   border-radius: 5px;
   border: 1.5px solid #073B4C;
@@ -349,6 +353,7 @@
 }
 
 .box span {
+  color: var(--fonts);
   font-size: 30px;
   float: left;
   margin: 6px 3px 6px 3px;
@@ -364,6 +369,7 @@
 
 .wpm {
   font-size: 30px;
+  color: var(--fonts);
 }
 
 .FalseRight p {
@@ -407,9 +413,9 @@
       -ms-flex-pack: center;
           justify-content: center;
   justify-content: center;
-  background-color: white;
+  background-color: var(--secondary);
   border-radius: 20px;
-  border: 1.5px solid black;
+  border: 1.5px solid var(--lightsecondary);
 }
 
 .signupBox h1 {
@@ -426,7 +432,7 @@
 .signupBox button {
   margin-top: 20px;
   font-family: 'Nunito', sans-serif;
-  background-color: white;
+  background-color: var(--secondary);
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
           box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
   border: none;
@@ -449,7 +455,7 @@
   background-color: lightgray;
   -webkit-box-shadow: none;
           box-shadow: none;
-  border: 1.5px solid black;
+  border: 1.5px solid var(--lightsecondary);
 }
 
 .signupContainer {
@@ -511,8 +517,8 @@
 }
 
 .timer {
-  border: 1.5px solid black;
-  background-color: white;
+  border: 1.5px solid var(--lightsecondary);
+  background-color: var(--secondary);
   border-radius: 5px;
   padding: 0px 5px 0px 5px;
 }
@@ -521,8 +527,8 @@
   font-family: 'Nunito', sans-serif;
   display: block;
   margin: auto;
-  background-color: white;
-  border: 1.5px solid #073B4C;
+  background-color: var(--secondary);
+  border: 1.5px solid var(--lightsecondary);
   border-radius: 5px;
 }
 
@@ -665,8 +671,17 @@ h1, h2 {
           flex-direction: row;
 }
 
+button {
+  color: var(--fonts);
+  background-color: var(--input) !important;
+}
+
+h1, i {
+  color: var(--fonts);
+}
+
 html {
-  background-color: #FFD166;
+  background-color: var(--bgcolor);
   font-family: 'Nunito', sans-serif;
 }
 
@@ -680,6 +695,7 @@ body {
 
 input, .saveResultBox button, .saveButton {
   font-family: 'Nunito', sans-serif;
+  color: var(--fonts);
 }
 
 ul {
@@ -699,26 +715,39 @@ button {
 input, .saveResultBox button, .saveButton {
   display: inline;
   font-size: 24px;
-  border: 1.5px solid black;
+  border: 1.5px solid var(--lightsecondary);
   border-radius: 5px;
   padding: 0px 10px 0px 10px;
 }
 
 input:hover, .saveResultBox button:hover, .saveButton:hover {
-  color: black;
+  color: var(--lightsecondary);
 }
 
 input:focus, .saveResultBox button:focus, .saveButton:focus {
   outline: 0px;
-  border: 1.5px solid black;
+  border: 1.5px solid var(--lightsecondary);
+}
+
+.flexCenter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .right {
-  color: #06D6A0;
+  color: #06D6A0 !important;
 }
 
 .false {
-  color: #ef476f;
+  color: #ef476f !important;
 }
 
 .highlight {

@@ -8,8 +8,17 @@
 @import "./sections/userinterface";
 @import "./sections/customGame";
 
+button {
+  color: var(--fonts);
+  background-color: var(--input) !important;
+}
+
+h1, i{
+  color: var(--fonts);
+}
+
 html {
-  background-color: #FFD166;
+  background-color: var(--bgcolor);
   font-family: 'Nunito', sans-serif;
 }
 
@@ -23,6 +32,7 @@ body {
 
 input {
   font-family: 'Nunito', sans-serif;
+  color: var(--fonts);
 }
 
 ul {
@@ -41,24 +51,30 @@ button {
 input {
   display: inline;
   font-size: 24px;
-  border: 1.5px solid black;
+  border: 1.5px solid var(--lightsecondary);
   border-radius: 5px;
   padding: 0px 10px 0px 10px;
   &:hover {
-    color: black;
+    color: var(--lightsecondary);
   }
 }
 
 input:focus {
   outline: 0px;
-  border: 1.5px solid black;
+  border: 1.5px solid var(--lightsecondary);
+}
+
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 }
 
 .right {
-  color: #06D6A0;
+  color: #06D6A0 !important;
 }
 .false {
-  color: #ef476f;
+  color: #ef476f !important;
 }
 
 .highlight {

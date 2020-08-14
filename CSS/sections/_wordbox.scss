@@ -1,13 +1,14 @@
 .box {
     height: 109px;
     width: 750px;
-    background-color: white;
+    background-color: var(--secondary);
     margin: auto;
     border-radius: 5px;
     border: 1.5px solid #073B4C;
     overflow: hidden;
   
     span {
+      color: var(--fonts);
       font-size: 30px;
       float: left;
       margin: 6px 3px 6px 3px;
@@ -23,6 +24,7 @@
 
 .wpm {
     font-size: 30px;
+    color: var(--fonts);
   }
 .FalseRight {
     p {

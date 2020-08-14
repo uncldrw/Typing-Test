@@ -24,8 +24,8 @@
   }
 
   .timer {
-    border: 1.5px solid black;
-    background-color: white;
+    border: 1.5px solid var(--lightsecondary);
+    background-color: var(--secondary);
     border-radius: 5px;
     padding: 0px 5px 0px 5px;
   }
@@ -34,8 +34,8 @@
     font-family: 'Nunito', sans-serif;
     display: block;
     margin: auto;
-    background-color: white;
-    border: 1.5px solid #073B4C;
+    background-color: var(--secondary);
+    border: 1.5px solid var(--lightsecondary);
     border-radius: 5px;
   
     i {

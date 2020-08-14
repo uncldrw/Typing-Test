@@ -9,18 +9,18 @@
     padding: 100px;
     height: auto;
     width: auto;
-    background-color: white;
+    background-color: var(--secondary);
     display: flex;
     justify-content: end;
     align-items: center;
     flex-direction: column;
     border-radius: 10px;
-    border: 1.5px solid black;
+    border: 1.5px solid var(--lightsecondary);
     button {
         cursor: pointer;
         margin-top: 10px;
-        background-color: white;
-        border: 1.5px solid black;
+        background-color: var(--secondary);
+        border: 1.5px solid var(--lightsecondary);
         font-family: 'Nunito', sans-serif;
         font-size: 26px;
         border-radius: 5px;

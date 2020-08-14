@@ -1,4 +1,5 @@
 <?php require(__DIR__ . "/sections/header.php"); ?>
+<div class="gameCustomizer">
 <h1>Gebe deine 3 Themen an</h1>
 <p class="desc">Diese 3 Wörter bestimmen deinen Wortschatz</p>
 <div class="customInput">
@@ -62,8 +63,9 @@
     </div>
 </div>
 <h2>Bist du Fertig?</h2>
-<div class="submitBtn">
-    <input type="submit" value="Test Starten">
+<form class="flexCenter" action="" style="margin-top: 50px;">
+    <input type="submit" value="starten">
+</form>
 </div>
 <?php require(__DIR__ . "/sections/footer.php"); ?>
   </body>

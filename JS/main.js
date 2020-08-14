@@ -229,4 +229,5 @@ function fetchWords() {
   let keyword2 = startWords[Math.floor(Math.random() * startWords.length)];
   let keyword3 = startWords[Math.floor(Math.random() * startWords.length)];
   start(keyword1, keyword2, keyword3)
+  console.log(keyword1, keyword2, keyword3)
 }

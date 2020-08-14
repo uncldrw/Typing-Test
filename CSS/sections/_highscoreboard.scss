@@ -1,11 +1,11 @@
 .highscore {
-    background-color: whitesmoke;
+    background-color: var(--secondary);
     width: 700px;
     height: 700px;
     display: block;
     margin: auto;
     border-radius: 5px;
-    border: 1.5px solid black;
+    border: 1.5px solid var(--lightsecondary);
   
     .highscoreTitle {
       text-align: center;

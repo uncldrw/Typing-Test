@@ -11,9 +11,9 @@
     flex-direction: column;
     justify-content: center;
     justify-content: center;
-    background-color: white;
+    background-color: var(--secondary);
     border-radius: 20px;
-    border: 1.5px solid black;
+    border: 1.5px solid var(--lightsecondary);
     h1 {
         margin: auto;
         margin-bottom: 10px;
@@ -26,7 +26,7 @@
     button {
         margin-top: 20px;
         font-family: 'Nunito', sans-serif;
-        background-color: white;
+        background-color: var(--secondary);
         box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
         border: none;
         font-size: 30px;
@@ -43,7 +43,7 @@
         &:focus {
             background-color: lightgray;
             box-shadow: none;
-            border: 1.5px solid black;
+            border: 1.5px solid var(--lightsecondary);
         }
     }
 }
