@@ -3,14 +3,15 @@
     --secondary: white;
     --lightsecondary: black;
     --fonts: black;
-    --input: #242424;
+    --input: #fff;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     :root {
         --bgcolor: #126936;
         --secondary: #2d2d25;
         --lightsecondary: #161612;
         --fonts: #a39ba8;
+        --input: #242424;
     }
- }
+ } */
